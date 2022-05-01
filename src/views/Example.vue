@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>{{parentMsg}}</h1>
-        <ChildComponent @send-message="sendMessage" />
+        <button type="button" @click="showData">부모 버튼</button>
+        <ChildComponent ref="child_component"/>
     </div>
 </template>
 
@@ -16,14 +16,18 @@ export default {
             parentMsg: ''
         };
     }, 
+    computed: {
+        msg() {
+            return this.$refs.child_component.msg;
+        }
+    },
     setup() {},
     created() {},
     mounted() {},
     unmounted() {},
     methods: {
-        sendMessage(data) {
-            alert(data)
-            this.parentMsg = data;
+        showData() {
+            alert(this.msg);
         }
     }
 }
