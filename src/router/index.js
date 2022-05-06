@@ -38,19 +38,45 @@ const routes = [
   },
   {
     path: '/serverdata',
-    name: '/ServerData',
+    name: 'ServerData',
     component: () => import(/* webpackChunkName: "about" */ '../views/ServerData.vue')
   },
   {
     path: '/slot',
-    name: 'SlotUseModalLayout',
+    name: 'SlotUserModalLayout',
     component: () => import(/* webpackChunkName: "about" */ '../views/SlotUserModalLayout.vue')
+  },
+  {
+    path: '/mixin',
+    name: 'MixinTest',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MixinTest.vue')
   },
   {
     path: '/inject',
     name: 'ProvideInject',
-    componet: () => import(/* webpackChunkName: "about" */ '../views/ProvideInject.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProvideInject.vue')
+  },
+  {
+    path: '/calculator',
+    name: 'Calculator',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Calculator.vue')
+  },
+  {
+    path: '/compositionapi',
+    name: 'CompositionApi',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CompositionAPI.vue')
+  },
+  {
+    path: '/compositionapi2',
+    name: 'CompositionApi2',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CompositionAPI2.vue')
+  },
+  {
+    path: '/compositionapi3',
+    name: 'CompositionApi3',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CompositionAPI3.vue')
   }
+  
 ]
 
 const router = createRouter({

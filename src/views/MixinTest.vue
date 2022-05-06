@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import ApiMixin from '../api.js'
 export default {
-    name:'serverData',
-    components:{},
+    name:'mixinTest',
+    mixins: [],
     data(){
         return{
             productList: []
@@ -33,21 +33,17 @@ export default {
     },
     setup(){},
     created(){},
-    mounted(){},
+    mounted(){
+        console.log("컴포넌트 mounted()");
+    },
     unmounted() {},
     methods: {
         async getProductList() {
-            this.productList = await this.api('https://07bc030c-4f0b-4150-a026-a75b37ebf038.mock.pstmn.io', 'get', {});
+            this.productList = await this.$api('https://07bc030c-4f0b-4150-a026-a75b37ebf038.mock.pstmn.io',
+            'get',
+            {}
+            );
             console.log(this.productList);
-        },
-        async api(url, method, data) {
-            return (await axios({
-                method: method,
-                url: url,
-                data: data
-            }).catch(e => {
-                console.log(e);
-            })).data;
         }
     }
 }

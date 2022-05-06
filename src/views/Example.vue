@@ -9,7 +9,7 @@
 import ChildComponent from './ChildComponent.vue';
 
 export default {
-    name:'',
+    name:'ExampleTest',
     components:{ChildComponent},
     data(){
         return{
