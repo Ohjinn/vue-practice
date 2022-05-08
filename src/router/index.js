@@ -75,8 +75,27 @@ const routes = [
     path: '/compositionapi3',
     name: 'CompositionApi3',
     component: () => import(/* webpackChunkName: "about" */ '../views/CompositionAPI3.vue')
+  },
+  {
+    path: '/compositionapiprovide',
+    name: 'CompositionAPIProvide',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CompositionAPIProvide.vue')
+  },
+  {
+    path: '/customdirective',
+    name: 'CustomDirective',
+    component: () => import(/* webpackChunkName: "about" */ '../views/CustomDirective.vue')
+  },
+  {
+    path: '/plugins',
+    name: 'Plugins',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Plugins.vue')
+  },
+  {
+    path: '/store',
+    name: 'StoreAccess',
+    component: () => import(/* webpackChunkName: "about" */ '../views/StoreAccess.vue')
   }
-  
 ]
 
 const router = createRouter({
