@@ -95,6 +95,16 @@ const routes = [
     path: '/store',
     name: 'StoreAccess',
     component: () => import(/* webpackChunkName: "about" */ '../views/StoreAccess.vue')
+  },
+  {
+    path: '/validationtest',
+    name: 'ValidationTest',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ValidationTest.vue')
+  },
+  {
+    path: '/watcheffect',
+    name: 'WatchEffect',
+    component: () => import(/* webpackChunkName: "about" */ '../views/setup_prac/WatchEffect.vue')
   }
 ]
 
